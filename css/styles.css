@@ -22,7 +22,7 @@ body {
 body {
   display: -ms-flexbox;
   display: flex;
-  color: #333;
+  color: hsla(197, 93%, 15%, 1);
 }
 
 .cover-container {
@@ -97,4 +97,15 @@ body {
  */
 .mastfoot {
   color: #333;
+}
+
+/* 
+ * Location Confirmation Screen
+ */
+.location-input {
+  padding: 5px;
+  color: hsla(197, 93%, 15%, 1);
+  background: #b9e1f0;
+  border-radius: 5px;
+  cursor: pointer;
 }
