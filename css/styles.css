@@ -20,13 +20,15 @@ body {
 }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
   color: hsla(197, 93%, 15%, 1);
 }
 
 .cover-container {
   max-width: 42em;
+}
+
+.container {
+  max-width: 960px;
 }
 
 /*
