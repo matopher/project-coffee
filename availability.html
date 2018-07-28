@@ -52,35 +52,31 @@
           <tbody>
             <tr>
               <td scope="row">
-                <a href="#">9:00am - 5:00pm</a>
+                <a href="#" data-toggle="modal" data-target="#editModal" data-day="Sunday">9:00am - 5:00pm</a>
               </td>
               <td>
-                <a href="#">9:00am - 5:00pm</a>
+                <a href="#" data-toggle="modal" data-target="#editModal" data-day="Monday">9:00am - 5:00pm</a>
               </td>
               <td>
-                <a href="#">9:00am - 5:00pm</a>
+                <a href="#" data-toggle="modal" data-target="#editModal" data-day="Tuesday">9:00am - 5:00pm</a>
               </td>
               <td>
-                <a href="#">9:00am - 5:00pm</a>
+                <a href="#" data-toggle="modal" data-target="#editModal" data-day="Wednesday">9:00am - 5:00pm</a>
               </td>
               <td>
-                <a href="#">9:00am - 5:00pm</a>
+                <a href="#" data-toggle="modal" data-target="#editModal" data-day="Thursday">9:00am - 5:00pm</a>
               </td>
               <td>
-                <a href="#">9:00am - 5:00pm</a>
+                <a href="#" data-toggle="modal" data-target="#editModal" data-day="Friday">9:00am - 5:00pm</a>
               </td>
               <td>
-                <a href="#">9:00am - 5:00pm</a>
+                <a href="#" data-toggle="modal" data-target="#editModal" data-day="Saturday">9:00am - 5:00pm</a>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary mb-5" data-toggle="modal" data-target="#editModal">
-      Launch demo modal
-    </button>
 
     <!-- Modal -->
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
@@ -124,6 +120,15 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
     crossorigin="anonymous"></script>
+
+  <script>
+    $('#editModal').on('show.bs.modal', function (event) {
+      var link = $(event.relatedTarget) // Button that triggered the modal
+      var day = link.data('day') // Extract info from data-* attributes
+      var modal = $(this)
+      modal.find('.modal-title').text('Set Availability for ' + day)
+    })
+  </script>
 </body>
 
 </html>
